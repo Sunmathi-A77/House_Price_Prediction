@@ -26,6 +26,30 @@ Loaded dataset using Pandas
 
 Checked the first few rows
 
+## Exploratory Data Analysis (EDA)
+
+Checked data types, summary statistics, and missing values.
+
+Converted categorical features to numeric (yes/no → 1/0, furnishingstatus → 1/2/3).
+
+Analyzed correlations:
+
+Top features correlated with price: area, bathrooms, stories, parking, airconditioning.
+
+Visualized using heatmap.
+
+Examined skewness:
+
+price, area, bathrooms, stories, parking → moderately right-skewed.
+
+bedrooms → slightly skewed (Symmetric)
+
+Applied log transformation to reduce skewness (price_log, area_log, etc.).
+
+Histograms used to visualize distributions.
+
+Detect outliers using IQR method - Only minor outliers detected in price_log and area_log.
+
 ## Feature Selection
 
 Selected features: area, bedrooms, bathrooms
@@ -101,3 +125,5 @@ Pandas – Data manipulation and analysis
 Scikit-learn – Machine learning (Linear Regression, train/test split, metrics)
 
 Matplotlib – Data visualization (scatter plot)
+
+Numpy - Numerical computations and array operations
