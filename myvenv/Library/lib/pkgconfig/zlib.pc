@@ -1,0 +1,13 @@
+prefix=C:/linear_reg/myvenv/Library
+exec_prefix=C:/linear_reg/myvenv/Library
+libdir=C:/linear_reg/myvenv/Library/lib
+sharedlibdir=C:/linear_reg/myvenv/Library/lib
+includedir=C:/linear_reg/myvenv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
