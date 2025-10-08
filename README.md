@@ -108,6 +108,10 @@ R² Score: 0.456
 
 MSE: 2750040479309.052
 
+Scatter plot - House Prices with Predicted House Highlighted
+
+<img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/0cbe4f5d-b276-4153-901f-d30b20d23ea5" />
+
 ## Conclusion
 
 The linear regression model predicts house prices based on area, bedrooms, and bathrooms.
