@@ -48,7 +48,7 @@ Bedrooms were nearly symmetric.
 
 Visualized distributions using histograms.
 
-<img width="831" height="682" alt="image" src="https://github.com/user-attachments/assets/6bc174f4-7940-45c5-bdc6-6890e84395a9" />
+<img width="831" height="682" alt="image" src="https://github.com/user-attachments/assets/ae8059e9-4bab-49d5-85ad-a9d9565c5584" />
 
 Correlation Analysis:
 
@@ -58,7 +58,7 @@ Top features correlated with price: area, bathrooms, stories, parking, aircondit
 
 Visualized correlations using a heatmap.
 
-<img width="546" height="434" alt="image" src="https://github.com/user-attachments/assets/58e3e128-802c-40d2-a41b-e8c82570d957" />
+<img width="546" height="434" alt="image" src="https://github.com/user-attachments/assets/14c07a36-99c9-43bd-bf52-840600ee1abf" />
 
 Categorical Columns Analysis:
 
@@ -76,13 +76,13 @@ Checked skewness after transformation to confirm normalization.
 
 Visualized distributions using histograms.
 
-<img width="1189" height="789" alt="image" src="https://github.com/user-attachments/assets/494a7875-6244-468a-aa73-8943e13ce1a5" />
+<img width="1189" height="789" alt="image" src="https://github.com/user-attachments/assets/a12fdfb3-c60b-407f-af39-c40d2619d3e7" />
 
 Detected outliers using IQR method.
 
 Visualized numeric columns with boxplots post log-transform.
 
-<img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/4e9913dd-ed45-4ea5-9670-53cb8ce8785a" />
+<img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/6a8c0bce-8f7f-4af1-981e-ea0cbb2452de" />
 
 Removed outliers using IQR and Check how many outliers remain
 
@@ -118,11 +118,11 @@ Residual Analysis:
 
 Plotted histogram of residuals to check distribution.
 
-<img width="576" height="455" alt="image" src="https://github.com/user-attachments/assets/010a0193-d18f-4493-9cee-c4d8f4be73f1" />
+<img width="562" height="455" alt="image" src="https://github.com/user-attachments/assets/2ec346d6-db7a-42d1-a0de-f3bd8260b730" />
 
 Scatter plot of residuals vs predicted values to confirm randomness.
 
-<img width="580" height="432" alt="image" src="https://github.com/user-attachments/assets/83205c30-9549-421f-9169-4782637b5cb0" />
+<img width="589" height="432" alt="image" src="https://github.com/user-attachments/assets/4c59be83-c2e4-4f80-927b-18175207c1ce" />
 
 Base Price (Intercept): Represents the theoretical price when all features are zero.
 
@@ -158,7 +158,7 @@ Converted the predicted log-price back to the original scale to get the final pr
 
 Predicted House Price: ₹5,256,840.70
 
-<img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/cae89314-53e3-4bd7-b628-6c0b4e887c4a" />
+<img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/edd5efdd-9d97-4a6a-988a-5b1129902a52" />
 
 ## 9. Visualizations
 
