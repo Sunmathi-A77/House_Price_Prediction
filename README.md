@@ -1,8 +1,8 @@
-# House Price Prediction
+# 🏠 House Price Prediction Project
 
 ## Project Overview
 
-The goal of this project is to predict house prices based on features such as area, number of bedrooms, and number of bathrooms. We use Multiple Linear Regression to model the relationship between these features and the house price.
+TThis project predicts house prices based on features such as area, bedrooms, bathrooms, stories, parking, and other amenities. A Multiple Linear Regression model is trained on the dataset after preprocessing, handling skewness, outliers, and encoding categorical variables.
 
 ## Dataset
 
@@ -10,124 +10,208 @@ Source: Kaggle Housing Prices Dataset (Link - https://www.kaggle.com/datasets/ya
 
 ## Features:
 
-area: Size of the house in square feet
+price: House price (target)
+
+area: Area of the house (sq.ft)
 
 bedrooms: Number of bedrooms
 
 bathrooms: Number of bathrooms
 
-price: Target variable (house price)
+stories: Number of stories
+
+mainroad, guestroom, basement, hotwaterheating, airconditioning, prefarea: Categorical yes/no features
+
+parking: Number of parking spots
+
+furnishingstatus: Furnishing status (furnished, semi-furnished, unfurnished)
 
 ## Steps Performed
 
-## Data Loading and Exploration
+## 1. Data Loading and Exploration
 
-Loaded dataset using Pandas
+Loaded the dataset and checked the first few rows.
 
-Checked the first few rows
+Reviewed data types and summary statistics to understand feature distributions and missing values.
 
-## Exploratory Data Analysis (EDA)
+## 2. Exploratory Data Analysis (EDA)
 
-Checked data types, summary statistics, and missing values.
+Numeric Columns Analysis:
 
-Converted categorical features to numeric (yes/no → 1/0, furnishingstatus → 1/2/3).
+Checked numeric features: price, area, bedrooms, bathrooms, stories, parking.
 
-Analyzed correlations:
+Detected outliers using the IQR method before log transformation.
+
+Visualized distributions using boxplots.
+
+Insert boxplot image of numeric columns before log transformation here
+
+Skewness Analysis:
+
+Price, area, bathrooms, stories, and parking were moderately right-skewed.
+
+Bedrooms were nearly symmetric.
+
+Visualized distributions using histograms.
+
+Insert histograms of numeric columns before log transformation here
+
+Correlation Analysis:
+
+Computed correlations between numeric features and price.
 
 Top features correlated with price: area, bathrooms, stories, parking, airconditioning.
 
-Visualized using heatmap.
+Visualized correlations using a heatmap.
 
-Examined skewness:
+Insert correlation heatmap here
 
-price, area, bathrooms, stories, parking → moderately right-skewed.
+Categorical Columns Analysis:
 
-bedrooms → slightly skewed (Symmetric)
+Reviewed distributions of features like mainroad, guestroom, basement, hotwaterheating, airconditioning, prefarea, furnishingstatus.
 
-Applied log transformation to reduce skewness (price_log, area_log, etc.).
+Insert bar charts for categorical columns here
 
-Histograms used to visualize distributions.
+## 3. Data Preprocessing
 
-Detect outliers using IQR method - Only minor outliers detected in price_log and area_log.
+Converted categorical features to numeric: yes/no → 1/0.
 
-## Feature Selection
+One-hot encoded furnishingstatus.
 
-Selected features: area, bedrooms, bathrooms
+Log-transformed skewed numeric features: price, area, bathrooms, stories, parking to reduce skewness.
 
-Target: price
+Checked skewness after transformation to confirm normalization.
 
-## Data Splitting
+Visualized distributions using histograms.
 
-Split the dataset into training (80%) and testing (20%) sets
+Insert histograms of numeric columns after log transformation here
 
-## Modeling
+Detected outliers after log transformation.
 
-Trained a Multiple Linear Regression model using sklearn.linear_model.LinearRegression
+Visualized numeric columns with boxplots post log-transform.
 
-## Evaluation
+Insert boxplots of numeric columns after log transformation here
 
-Predicted prices on the test set
+## 4. Feature Selection
 
-## Calculated:
+Selected features for modeling: area, bedrooms, bathrooms, stories, parking, and encoded categorical columns.
 
-R² Score: Measures how well the model explains variance
+Target variable: price
 
-Mean Squared Error (MSE): Measures prediction error
+## 5. Data Splitting
 
-## Prediction
+Split dataset into training (80%) and testing (20%) sets.
+
+## 6. Model Training
+
+Trained a Multiple Linear Regression model using all numeric and encoded categorical features.
+
+Evaluated model coefficients to understand feature impact on house price.
+
+Insert table or image of feature coefficients here
+
+## 7. Model Evaluation
+
+Predicted house prices on the test set.
+
+Calculated metrics:
+
+R² Score: Indicates how well the model explains variance in the target.
+
+Mean Squared Error (MSE): Measures average prediction error.
+
+Root Mean Squared Error (RMSE): Square root of MSE for interpretation in original units.
+
+Residual Analysis:
+
+Plotted histogram of residuals to check distribution.
+
+Scatter plot of residuals vs predicted values to confirm randomness.
+
+Insert residual plots here
+
+Base Price (Intercept): Represents the theoretical price when all features are zero.
+
+## 8. Prediction
 
 Predicted price for a new house with:
 
-Area = 2500 sq.ft
+Area: 2500 sq.ft
 
-Bedrooms = 3
+Bedrooms: 3
 
-Bathrooms = 2
+Bathrooms: 2
 
-## Base Price
+Stories: 2
 
-The intercept of the model represents the base price when all features are zero.
+Parking: 1
 
-## Visualization
+Main Road: Yes
 
-Actual vs Predicted Prices Scatter Plot - Shows how close predicted prices are to actual prices.
+Guest Room: No
 
-<img width="536" height="470" alt="image" src="https://github.com/user-attachments/assets/700ea4a0-1afd-46ff-9370-499953a46f43" />
+Basement: No
 
-Blue points represent actual vs predicted house prices.
+Hot Water Heating: No
 
-Red line represents perfect predictions (predicted = actual).
+Air Conditioning: Yes
 
-## Results
+Preferred Area: Yes
 
-Base Price (Intercept):  ₹59485.38
+Furnishing: Furnished
 
-Predicted Price for 2500 sq.ft, 3 bed, 2 bath: ₹₹4848384.07
+Converted the predicted log-price back to the original scale to get the final price.
 
-R² Score: 0.456
+Predicted House Price: ₹X,XXX,XXX.XX
 
-MSE: 2750040479309.052
+Insert prediction visualization or highlight image here
 
-Scatter plot - House Prices with Predicted House Highlighted
+## 9. Visualizations
 
-<img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/0cbe4f5d-b276-4153-901f-d30b20d23ea5" />
+Histograms: Show distributions of numeric features before and after log transformation.
 
-## Conclusion
+Boxplots: Highlight outliers in numeric features.
 
-The linear regression model predicts house prices based on area, bedrooms, and bathrooms.
+Correlation Heatmap: Shows relationships between features and target.
 
-The scatter plot helps visualize how close predictions are to actual prices.
+Residual Plots: Ensure model assumptions are satisfied.
 
-Base price (intercept) represents the theoretical price when all features are zero.
+Scatter Plot of Actual vs Predicted Prices: Highlights prediction accuracy.
 
-## Technologies & Libraries Used
+Insert respective images in this section
 
-Python – Programming language
+## 10. Results
+
+Base Price (Intercept): ₹11.91
+
+Predicted Price for 2500 sq.ft, 3 bed, 2 bath: ₹5,435,800.86
+
+R² Score: 0.682
+
+MSE: 0.061
+
+RMSE: 0.248
+
+## 11. Conclusion
+
+The linear regression model effectively predicts house prices based on area, bedrooms, bathrooms, and other features.
+
+Log transformation reduced skewness and minimized outliers, improving model stability.
+
+Residual and scatter plots confirm good prediction accuracy.
+
+Base price (intercept) provides a theoretical starting value for houses with minimal features.
+
+## 12. Technologies & Libraries Used
+
+Python – Programming Language
 
 Pandas – Data manipulation and analysis
 
-Scikit-learn – Machine learning (Linear Regression, train/test split, metrics)
+NumPy – Numerical computations
 
-Matplotlib – Data visualization (scatter plot)
+Scikit-learn – Machine Learning (Linear Regression, train/test split, metrics)
 
-Numpy - Numerical computations and array operations
+Matplotlib – Data visualization (histograms, scatter plots)
+
+Seaborn – Data visualization (heatmaps, distribution plots)
