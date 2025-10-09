@@ -44,7 +44,7 @@ Detected outliers using the IQR method before log transformation.
 
 Visualized distributions using boxplots.
 
-Insert boxplot image of numeric columns before log transformation here
+<img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/aee7b4de-559e-498f-9cb5-a1f3ca79f677" />
 
 Skewness Analysis:
 
@@ -54,7 +54,7 @@ Bedrooms were nearly symmetric.
 
 Visualized distributions using histograms.
 
-Insert histograms of numeric columns before log transformation here
+<img width="831" height="682" alt="image" src="https://github.com/user-attachments/assets/6bc174f4-7940-45c5-bdc6-6890e84395a9" />
 
 Correlation Analysis:
 
@@ -64,13 +64,11 @@ Top features correlated with price: area, bathrooms, stories, parking, aircondit
 
 Visualized correlations using a heatmap.
 
-Insert correlation heatmap here
+<img width="546" height="434" alt="image" src="https://github.com/user-attachments/assets/58e3e128-802c-40d2-a41b-e8c82570d957" />
 
 Categorical Columns Analysis:
 
-Reviewed distributions of features like mainroad, guestroom, basement, hotwaterheating, airconditioning, prefarea, furnishingstatus.
-
-Insert bar charts for categorical columns here
+Reviewed count of features like mainroad, guestroom, basement, hotwaterheating, airconditioning, prefarea, furnishingstatus.
 
 ## 3. Data Preprocessing
 
@@ -84,13 +82,13 @@ Checked skewness after transformation to confirm normalization.
 
 Visualized distributions using histograms.
 
-Insert histograms of numeric columns after log transformation here
+<img width="1189" height="789" alt="image" src="https://github.com/user-attachments/assets/494a7875-6244-468a-aa73-8943e13ce1a5" />
 
 Detected outliers after log transformation.
 
 Visualized numeric columns with boxplots post log-transform.
 
-Insert boxplots of numeric columns after log transformation here
+<img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/4e9913dd-ed45-4ea5-9670-53cb8ce8785a" />
 
 ## 4. Feature Selection
 
@@ -108,8 +106,6 @@ Trained a Multiple Linear Regression model using all numeric and encoded categor
 
 Evaluated model coefficients to understand feature impact on house price.
 
-Insert table or image of feature coefficients here
-
 ## 7. Model Evaluation
 
 Predicted house prices on the test set.
@@ -126,9 +122,11 @@ Residual Analysis:
 
 Plotted histogram of residuals to check distribution.
 
+<img width="576" height="455" alt="image" src="https://github.com/user-attachments/assets/010a0193-d18f-4493-9cee-c4d8f4be73f1" />
+
 Scatter plot of residuals vs predicted values to confirm randomness.
 
-Insert residual plots here
+<img width="580" height="432" alt="image" src="https://github.com/user-attachments/assets/83205c30-9549-421f-9169-4782637b5cb0" />
 
 Base Price (Intercept): Represents the theoretical price when all features are zero.
 
@@ -162,9 +160,9 @@ Furnishing: Furnished
 
 Converted the predicted log-price back to the original scale to get the final price.
 
-Predicted House Price: ₹X,XXX,XXX.XX
+Predicted House Price: ₹5,435,800.86
 
-Insert prediction visualization or highlight image here
+<img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/cae89314-53e3-4bd7-b628-6c0b4e887c4a" />
 
 ## 9. Visualizations
 
@@ -178,13 +176,11 @@ Residual Plots: Ensure model assumptions are satisfied.
 
 Scatter Plot of Actual vs Predicted Prices: Highlights prediction accuracy.
 
-Insert respective images in this section
-
 ## 10. Results
 
 Base Price (Intercept): ₹11.91
 
-Predicted Price for 2500 sq.ft, 3 bed, 2 bath: ₹5,435,800.86
+Predicted Price for 2500 sq.ft, 3 bedrooms, 2 bathrooms: ₹5,435,800.86
 
 R² Score: 0.682
 
