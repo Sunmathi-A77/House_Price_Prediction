@@ -40,12 +40,6 @@ Numeric Columns Analysis:
 
 Checked numeric features: price, area, bedrooms, bathrooms, stories, parking.
 
-Detected outliers using the IQR method before log transformation.
-
-Visualized distributions using boxplots.
-
-<img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/aee7b4de-559e-498f-9cb5-a1f3ca79f677" />
-
 Skewness Analysis:
 
 Price, area, bathrooms, stories, and parking were moderately right-skewed.
@@ -84,11 +78,13 @@ Visualized distributions using histograms.
 
 <img width="1189" height="789" alt="image" src="https://github.com/user-attachments/assets/494a7875-6244-468a-aa73-8943e13ce1a5" />
 
-Detected outliers after log transformation.
+Detected outliers using IQR method.
 
 Visualized numeric columns with boxplots post log-transform.
 
 <img width="1189" height="590" alt="image" src="https://github.com/user-attachments/assets/4e9913dd-ed45-4ea5-9670-53cb8ce8785a" />
+
+Removed outliers using IQR and Check how many outliers remain
 
 ## 4. Feature Selection
 
@@ -160,7 +156,7 @@ Furnishing: Furnished
 
 Converted the predicted log-price back to the original scale to get the final price.
 
-Predicted House Price: ₹5,435,800.86
+Predicted House Price: ₹5,256,840.70
 
 <img width="567" height="455" alt="image" src="https://github.com/user-attachments/assets/cae89314-53e3-4bd7-b628-6c0b4e887c4a" />
 
@@ -178,15 +174,15 @@ Scatter Plot of Actual vs Predicted Prices: Highlights prediction accuracy.
 
 ## 10. Results
 
-Base Price (Intercept): ₹11.91
+Base Price (Intercept): ₹11.80
 
-Predicted Price for 2500 sq.ft, 3 bedrooms, 2 bathrooms: ₹5,435,800.86
+Predicted Price for 2500 sq.ft, 3 bedrooms, 2 bathrooms: ₹5,256,840.70
 
-R² Score: 0.682
+R² Score: 0.725
 
-MSE: 0.061
+MSE: 0.046
 
-RMSE: 0.248
+RMSE: 0.215
 
 ## 11. Conclusion
 
