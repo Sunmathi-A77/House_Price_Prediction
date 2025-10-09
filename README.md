@@ -207,3 +207,13 @@ Scikit-learn – Machine Learning (Linear Regression, train/test split, metrics)
 Matplotlib – Data visualization (histograms, scatter plots)
 
 Seaborn – Data visualization (heatmaps, distribution plots)
+
+## 🏁 Final Judgement of Your Model
+
+✅ Model is in the Good Range
+
+R² = 0.725 → Good accuracy
+
+MSE & RMSE are low → Errors are controlled
+
+Model is suitable for house price prediction
