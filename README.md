@@ -217,3 +217,21 @@ R² = 0.725 → Good accuracy
 MSE & RMSE are low → Errors are controlled
 
 Model is suitable for house price prediction
+
+## 🏠 House Price Prediction App
+
+### Try the live app here: House Price Prediction App
+
+https://houseprice--predictor.streamlit.app/
+
+A simple web app built with Streamlit that predicts house prices using a trained Linear Regression model.
+
+### Usage
+
+Enter numeric details: area, bedrooms, bathrooms, stories, parking.
+
+Select Yes/No for mainroad, guestroom, basement, hot water heating, air conditioning, preferred area.
+
+Choose furnishing status.
+
+Click Predict House Price to see the estimated price.
